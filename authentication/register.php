@@ -1,3 +1,7 @@
+<?php
+ include "connection.php";
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -25,19 +29,27 @@
 			<div class="content-error">
 				<div class="hpanel">
                     <div class="panel-body">
-                        <form action="#" id="loginForm">
+                        <form action="" name="form1" method="post">
                             <div class="row">
                                 <div class="form-group col-lg-12">
                                     <label>Username</label>
-                                    <input type="password" class="form-control">
+                                    <input type="text" name="username" class="form-control">
                                 </div>
                                 <div class="form-group col-lg-12">
                                     <label>Password</label>
-                                    <input type="password" class="form-control">
+                                    <input type="password" name="password" class="form-control">
                                 </div>
                               </div>
                             <div class="text-center">
-                                <button class="btn btn-success loginbtn">Register</button>
+                                <button type="submit" name="submit1" class="btn btn-success loginbtn">Register</button>
+                            </div>
+
+                            <div class="alert alert-success" id="success" style="display:none">
+                                <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+                            </div>
+
+                            <div class="alert alert-danger" id="failure" style="display:none">
+                                <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
                             </div>
                         </form>
                     </div>
@@ -46,6 +58,33 @@
 
 		</div>   
     </div>
+
+    <?php
+        if(isset($_POST["submit1"]))
+        {
+            $count=0;
+            $res=mysqli_query($db,"select * from registration where username='$_POST[username]'") or die(mysqli_error($db));
+            $count=mysqli_num_rows($res);
+
+            if($count>0)
+            {
+                ?>
+                    <script type="text/javascript">
+                        document.getElementById("success").style.display="none";
+                        document.getElementById("failure").style.display="block";
+                    </script>
+                <?php
+            }else{
+                mysqli_query($db,"insert into registration values(NULL,'$_POST[username]','$_POST[password]')") or die(mysqli_error($db));
+                ?>
+                    <script type="text/javascript">
+                        document.getElementById("success").style.display="block";
+                        document.getElementById("failure").style.display="none";
+                    </script>
+                <?php
+            }
+        }
+    ?>
 </body>
 
 </html>
