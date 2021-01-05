@@ -3,26 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quizz App</title>
+  <title>Quizz</title>
   <link rel="stylesheet" href="materialize.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
-  <div class="container">
-    <h2 class="center">OCC Quizz App</h2>
+  <nav class="navbar navbar-expand-md navbar-light bg-primary">
+    <a class="navbar-brand" href="#"><img src="/image/logo.png" width="80" height="60"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" style="color: white;">
+                Courses
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                <a class="dropdown-item" href="./course/class_1_12.html">Class 1-12</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/course/admissionTest.html">Admission Test</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/course/universityJob.html">University/Jobs</a>
+              </div>
+            </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" href="#">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" href="#">Admission 2020</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" href="#">Login/SignUp</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  </div>
 
+
+  <footer id="sticky-footer" class="card text-white bg-primary mb-3" style="height: 1cm;">
+    <div class="container text-center">
+      <h4 style="color: white; text-align: center;" >Physics Chapter 1</h4>
+    </div>
+  </footer>
+<!----------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------>
+<!---------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------>
+  <div class="container">
     <div class="row">
       <div class="col l3 s12"></div>
       <div class="col l6 s12">
 
-        <div class="card-panel hide" id="result">
-          <h5 class="center">You have scored <span class="teal-text marks">0%</span> of your test.</h5>
+        <div class="toast invisible" data-autohide="false" id="result" >
+          <div class="toast-header">
+            <strong class="mr-auto text-primary">Result</strong>
+            
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+          </div>
+          <div class="toast-body">
+            <h5 class="center" style="color: black;">You have scored <span class="teal-text marks">0%</span> of your test.</h5>
+          </div>
         </div>
-
         <div class="card-panel">
           <form class="qns-form">
-
             <div class="question">
               <p>What is HTML in full?</p>
               <div class="answer">
@@ -47,6 +100,7 @@
               </div>
 
             </div>
+            <br>
 
             <div class="question">
 
@@ -74,6 +128,7 @@
               </div>
 
             </div>
+            <br>
 
             <div class="question">
               <p>Is PHP a front-end language? </p>
@@ -101,6 +156,7 @@
                 </label>
               </div>
             </div>
+            <br>
 
             <div class="question">
 
@@ -130,6 +186,7 @@
               </div>
 
             </div>
+            <br>
 
 
             <div class="question">
@@ -158,7 +215,7 @@
 
             </div>
 
-            <button class="btn right">Submit answer</button>
+            <button class="btn btn-primary" id="myBtn">Submit answer</button>
           </form>
           <div class="clearfix"></div>
         </div>
@@ -169,7 +226,20 @@
     </div>
   </div>
 
+
+  <script>
+    $(document).ready(function(){
+      $('.toast').toast('show');
+    });
+    </script>
   <script src="app.js"></script>
+
+  <footer id="sticky-footer" class="card text-white bg-primary mb-3" style="height: 1cm;">
+    <div class="container text-center">
+      <h6 style="color: white; text-align: center;" >Copyright &copy; UniPrep 2021</h6>
+    </div>
+  </footer>
+
 </body>
 
 </html>
