@@ -1,7 +1,9 @@
 const quizForm = document.querySelector('.qns-form');
 const resultPanel = document.querySelector('#result');
+
 const Marks = document.querySelector('span.marks');
 const testAnswers = ['A', 'B', 'B', 'C', 'B'];
+const p = document.getElementById('result');
 
 quizForm.addEventListener('submit', e => {
   e.preventDefault();
@@ -14,10 +16,9 @@ quizForm.addEventListener('submit', e => {
       score += 20;
     }
   });
-
-  resultPanel.classList.remove('hide');
-
-
+  
+  resultPanel.classList.remove('invisible');
+  
   scrollTo({
     top: 0,
     behavior: 'smooth'
