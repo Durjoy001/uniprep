@@ -23,7 +23,7 @@
 	<div class="error-pagewrap">
 		<div class="error-page-int">
 			<div class="text-center custom-login">
-				<h3>Register Now</h3>
+				<h3>Login Now</h3>
 
 			</div>
 			<div class="content-error">
@@ -41,16 +41,17 @@
                                 </div>
                               </div>
                             <div class="text-center">
-                                <button type="submit" name="submit1" class="btn btn-success loginbtn">Register</button>
+                                <button type="submit" name="login" class="btn btn-success loginbtn">Login</button>
                             </div>
-
-                            <div class="alert alert-success" id="success" style="display:none">
-                                <strong>Success!</strong> Registration Complete!
+                            <div class="text-center">
+                                <a class="btn btn-default btv-block" href="register.php">Register</a>
                             </div>
 
                             <div class="alert alert-danger" id="failure" style="display:none">
-                                <strong>Error!</strong> User Already Registered!
+                                <strong>Error!</strong> Wrong username  & password!
                             </div>
+
+                           
                         </form>
                     </div>
                 </div>
@@ -60,26 +61,26 @@
     </div>
 
     <?php
-        if(isset($_POST["submit1"]))
+        if(isset($_POST["login"]))
         {
             $count=0;
-            $res=mysqli_query($db,"select * from registration where username='$_POST[username]'") or die(mysqli_error($db));
+            $res=mysqli_query($db,"select * from registration where username='$_POST[username]' && password='$_POST[password]'");
             $count=mysqli_num_rows($res);
 
-            if($count>0)
+            if($count==0)
             {
                 ?>
                     <script type="text/javascript">
-                        document.getElementById("success").style.display="none";
+                        
                         document.getElementById("failure").style.display="block";
                     </script>
                 <?php
-            }else{
-                mysqli_query($db,"insert into registration values(NULL,'$_POST[username]','$_POST[password]')") or die(mysqli_error($db));
+            }
+            else
+            {
                 ?>
                     <script type="text/javascript">
-                        document.getElementById("success").style.display="block";
-                        document.getElementById("failure").style.display="none";
+                        window.location="demo.php";
                     </script>
                 <?php
             }
