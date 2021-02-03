@@ -8,7 +8,7 @@ const p = document.getElementById('result');
 quizForm.addEventListener('submit', e => {
   e.preventDefault();
 
-  let userAnswers = [quizForm.qn1.value, quizForm.qn2.value, quizForm.qn3.value, quizForm.qn4.value, quizForm.qn5.value];
+  let userAnswers = [quizForm.qn0.value, quizForm.qn1.value, quizForm.qn2.value, quizForm.qn3.value, quizForm.qn4.value];
   let score = 0;
 
   userAnswers.forEach((answer, index) => {
