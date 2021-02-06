@@ -4,7 +4,7 @@ include "../connection.php";
 $exam_category=$_GET["exam_category"];
 $_SESSION["exam_category"]=$exam_category;
 
-$res=mysqli_query($link,"select * from exam_category where category='$exam_category'");
+$res=mysqli_query($db,"select * from exam_category where category='$exam_category'");
 while($row=mysqli_fetch_array($res))
 {
     $_SESSION["exam_time"]=$row["exam_time"];
