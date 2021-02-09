@@ -2,7 +2,7 @@ const quizForm = document.querySelector('.qns-form');
 const resultPanel = document.querySelector('#result');
 
 const Marks = document.querySelector('span.marks');
-const testAnswers = ['A', 'B', 'B', 'C', 'B'];
+const testAnswers = ['A', 'B', 'B', 'B', 'B', 'A', 'A', 'B', 'A', 'A', 'C', 'D'];
 const p = document.getElementById('result');
 
 quizForm.addEventListener('submit', e => {
