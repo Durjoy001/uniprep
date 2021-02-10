@@ -68,21 +68,7 @@ var jsonData = [
       "opt2" : "2500 Am",
       "opt3" : "4000 Am",
       "opt4" : "4555 Am",
-    },
-    {
-      "q" : "Two resistors R1 and R2 of 4 and 6 ohm are connected in parallel across a battery.The ration of power dissipated in them p1 : p2 will be? [SUST - 2015]",
-      "opt1" : "4:99",
-      "opt2" : "3:25",
-      "opt3" : "9:45",
-      "opt4" : "1:45",
-  },
-  {
-      "q" : "A wire of resistance 8R is bent in the form of a circle as shown. What is the resistance between the ends of diameter AB? [DU - 2018]",
-      "opt1" : "25R",
-      "opt2" : "34R",
-      "opt3" : "45R",
-      "opt4" : "50R",
-  }
+    }
 ];
 
 function petTemplate(pet,index){

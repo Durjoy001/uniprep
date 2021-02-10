@@ -68,41 +68,6 @@ var jsonData = [
       "opt2" : "2500 Am",
       "opt3" : "4000 Am",
       "opt4" : "5000 Am",
-    },
-    {
-      "q" : "Data representation is based on the ………….. number system, which uses two numbers to represent all data.",
-      "opt1" : "binary",
-      "opt2" : "biometric",
-      "opt3" : "byte",
-      "opt4" : "bicentennial",
-    },
-    {
-      "q" : "The half-life for a first-order reaction is 32 s. What was the original concentration if, after 2.0 minutes, the reactant concentration is 0.062 M?",
-      "opt1" : "0.84 M ",
-      "opt2" : "0.89M",
-      "opt3" : "0.90M",
-      "opt4" : "0.99M",
-    },
-    {
-      "q" : "The decomposition of carbon disulfide, CS2, to carbon monosulfide, CS, and sulfur is first order with k = 2.8 x 10-7 s-1 at 1000oC. CS2 CS + S What is the half-life of this reaction at 1000oC? ",
-      "opt1" : "5.0 x 107 s ",
-      "opt2" : "4.7 x 10-6 s",
-      "opt3" : "3.8 x 105 s ",
-      "opt4" : "6.1 x 104 s ",
-    },
-    {
-      "q" : "	A die is thrown again and again until three sixes are obtained. Find the probability of obtaining third six in the sixth throw of the die.",
-      "opt1" : "625/23329",
-      "opt2" : "625/23328",
-      "opt3" : "655/23328",
-      "opt4" : "695/23328",
-    },
-    {
-      "q" : "	A compass needle free to turn in the vertical plane, orients itself vertically at a certain place on the earth. Calculate the horizontal component 0f earth’s magnetic field.",
-      "opt1" : "1.5708",
-      "opt2" : "2.564	",
-      "opt3" : "0.6545",
-      "opt4" : "3.564564",
     }
 ];
 
