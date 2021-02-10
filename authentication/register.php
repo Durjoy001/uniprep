@@ -167,6 +167,7 @@
                 <?php
             }else{
                 mysqli_query($db,"insert into registration values(NULL,'$_POST[username]','$_POST[password]')") or die(mysqli_error($db));
+                mysqli_query($db,"insert into admin_login values(NULL,'$_POST[username]','$_POST[password]')") or die(mysqli_error($db));
                 ?>
                     <script type="text/javascript">
                         document.getElementById("success").style.display="block";

@@ -150,7 +150,7 @@ include "../authentication/connection.php";
 
 </html>
 
-<?php
+<!-- <?php
         if(isset($_POST["submit1"]))
         {
             $count=0;
@@ -178,4 +178,28 @@ include "../authentication/connection.php";
                 <?php
             }
         }
+    ?> -->
+
+<?php
+    if (isset($_POST["submit1"])) {
+        $count = 0;
+        $res=mysqli_query($db,"select * from admin_login where username='$username' && password='$password'");
+        $count = mysqli_num_rows($res);
+
+        if ($count == 0) {
+
+    ?>
+            <script type="text/javascript">
+                document.getElementById("failure").style.display = "block";
+            </script>
+        <?php
+        } else {
+            $_SESSION["username"] = $_POST["username"];
+        ?>
+            <script type="text/javascript">
+                window.location = "exam_category.php";
+            </script>
+    <?php
+        }
+    }
     ?>
